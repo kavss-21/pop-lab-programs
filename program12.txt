@@ -1,0 +1,71 @@
+12:{
+                        code: `#include <stdio.h>
+
+                        int main() {
+                            FILE *input_file, *target_file;
+                            char input_file_name[100], target_file_name[100];
+                            char ch;
+                        
+                            // Read the input file name
+                            printf("Enter the input file name: ");
+                            fgets(input_file_name, sizeof(input_file_name), stdin);
+                            input_file_name[strcspn(input_file_name, "\\n")] = '\\0'; // Remove the newline character
+                        
+                            // Open the input file
+                            input_file = fopen(input_file_name, "r");
+                            if (input_file == NULL) {
+                                printf("Error: could not open input file %s\\n", input_file_name);
+                                return 1;
+                            }
+                        
+                            // Read the target file name
+                            printf("Enter the target file name: ");
+                            fgets(target_file_name, sizeof(target_file_name), stdin);
+                            target_file_name[strcspn(target_file_name, "\\n")] = '\\0'; // Remove the newline character
+                        
+                            // Open the target file
+                            target_file = fopen(target_file_name, "w");
+                            if (target_file == NULL) {
+                                printf("Error: could not open target file %s\\n", target_file_name);
+                                fclose(input_file); // Ensure the input file is closed
+                                return 1;
+                            }
+                        
+                            // Copy the contents of the input file to the target file
+                            while ((ch = fgetc(input_file)) != EOF) {
+                                fputc(ch, target_file);
+                            }
+                        
+                            // Close the files
+                            fclose(input_file);
+                            fclose(target_file);
+                        
+                            printf("File copied successfully.\\n");
+                            return 0;
+                        }`
+                    }
+                                    
+                                };
+                                function showProgram(event, programNumber) {
+                                    event.preventDefault();
+                                    const codeBlock = document.getElementById("program-code");
+                                
+                                    if (programs[programNumber]) {
+                                        codeBlock.textContent = programs[programNumber].code;
+                                        Prism.highlightElement(codeBlock);
+                                    } else {
+                                        codeBlock.textContent = "Program not found.";
+                                    }
+                                }
+                                
+                                // Function to copy code to clipboard
+                                function copyCode() {
+                                    const codeBlock = document.getElementById("program-code");
+                                    navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                                        alert("Code copied to clipboard!");
+                                    }).catch(err => {
+                                        alert("Failed to copy code.");
+                                        console.error(err);
+                                    });
+                                }
+                               

@@ -1,0 +1,79 @@
+ 8: {
+        code: `#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void compare(char str1[], char str2[]);
+void concatenate(char str1[], char str2[]);
+void stringlength(char str1[]);
+
+int main() 
+{ 
+    char str1[50], str2[50]; 
+    int choice; 
+    
+    do 
+    { 
+        printf("\\n STRING OPERATIONS\\n"); 
+        printf("1: String Compare\\t 2: String Concatenate\\n"); 
+        printf("3: String Length \\t 4: Exit\\n"); 
+        printf("Enter your Choice: "); 
+        scanf("%d", &choice); 
+        
+        switch(choice) 
+        { 
+            case 1: 
+                printf("Enter two Strings: "); 
+                scanf("%s %s", str1, str2); 
+                compare(str1, str2); 
+                break; 
+
+            case 2: 
+                printf("Enter two Strings: "); 
+                scanf("%s %s", str1, str2); 
+                concatenate(str1, str2); 
+                break; 
+
+            case 3: 
+                printf("Enter a String: "); 
+                scanf("%s", str1); 
+                stringlength(str1); 
+                break; 
+
+            case 4: 
+                printf("Exiting program...\\n");
+                break;
+
+            default: 
+                printf("\\nInvalid choice. Please enter a valid option.\\n"); 
+        } 
+    } while (choice != 4); 
+
+    return 0; 
+}
+
+// Function to compare two strings
+void compare(char str1[], char str2[]) 
+{ 
+    if (strcmp(str1, str2) == 0) 
+        printf("\\nBoth strings are the same.\\n"); 
+    else 
+        printf("\\nStrings are different.\\n"); 
+}
+
+// Function to concatenate two strings
+void concatenate(char str1[], char str2[]) 
+{ 
+    char str3[100]; 
+    strcpy(str3, str1);  
+    strcat(str3, str2);  
+
+    printf("The Concatenated String: %s\\n", str3); 
+}
+
+// Function to find the length of a string
+void stringlength(char str1[]) 
+{ 
+    printf("The Length of the string: %lu\\n", strlen(str1)); 
+}`,
+    },

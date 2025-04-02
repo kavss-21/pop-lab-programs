@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Lab Programs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script class="script.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <img src="kssem-logo.png" alt="KSSEM Logo">
+        </div>
+        <div class="title">
+            <h1>K S School of Engineering and Management</h1>
+        </div>
+        <div class="branch-logo">
+            <img src="branch-logo.png" alt="Branch Logo">
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="https://plum-ways-870316.framer.app/">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Programs ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="showProgram(event, 1)">Program 1</a></li>
+                    <li><a href="#" onclick="showProgram(event, 2)">Program 2</a></li>
+                    <li><a href="#" onclick="showProgram(event, 3)">Program 3</a></li>
+                    <li><a href="#" onclick="showProgram(event, 4)">Program 4</a></li>
+                    <li><a href="#" onclick="showProgram(event, 5)">Program 5</a></li>
+                    <li><a href="#" onclick="showProgram(event, 6)">Program 6</a></li>
+                    <li><a href="#" onclick="showProgram(event, 7)">Program 7</a></li>
+                    <li><a href="#" onclick="showProgram(event, 8)">Program 8</a></li>
+                    <li><a href="#" onclick="showProgram(event, 9)">Program 9</a></li>
+                    <li><a href="#" onclick="showProgram(event, 10)">Program 10</a></li>
+                    <li><a href="#" onclick="showProgram(event, 11)">Program 11</a></li>
+                    <li><a href="#" onclick="showProgram(event, 12)">Program 12</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="program-display">
+            <h2>Select a program to view</h2>
+            <button id="copy-button" onclick="copyCode()">Copy Code</button>
+            <pre><code id="program-code" class="language-c">/* Click on a program to display its code */</code></pre>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <div class="about-card">
+                <img src="student1.jpg" alt="Student 1">
+                <h3>kavyashree.M</h3>
+                <p>USN: 1KG23CB021</p>
+            </div>
+            <div class="about-card">
+                <img src="student2.jpg" alt="Student 2">
+                <h3>Tanushree.K A</h3>
+                <p>USN: 1KG23CB054</p>
+            </div>
+            <div class="about-card">
+                <img src="student3.jpg" alt="Student 3">
+                <h3>Madhumitha P</h3>
+                <p>USN: 1KG23CB025</p>
+            </div>
+            <div class="about-card">
+                <img src="student4.jpg" alt="Student 4">
+                <h3>Sheethal S</h3>
+                <p>USN: 1KG23CB047</p>
+
+            </div>
+            <div class="about-card">
+                <img src="student5.jpg" alt="Student 5">
+                <h3>Shashipriya G V</h3>
+                <p>USN: 1KG23CB046</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

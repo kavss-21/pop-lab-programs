@@ -1,0 +1,24 @@
+ 4: {
+            code: `#include <stdio.h>
+    void main() { 
+        int i, j, n; 
+        printf("Input number of rows: "); 
+        scanf("%d", &n); 
+    
+        for(i = 1; i <= n; i++) { 
+            // Print blank spaces
+            for(j = 1; j <= n - i; j++) 
+                printf(" "); 
+            
+            // Display numbers in ascending order up to the middle
+            for(j = 1; j <= i; j++) 
+                printf("%d", j); 
+            
+            // Display numbers in reverse order after middle
+            for(j = i - 1; j >= 1; j--) 
+                printf("%d", j); 
+            
+            printf("\\n"); 
+        } 
+    }`
+        },

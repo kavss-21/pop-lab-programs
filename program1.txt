@@ -1,0 +1,40 @@
+1: {
+        code: `#include <stdio.h>
+#include <stdlib.h>  
+
+void main() {
+    float a, b, res;
+    char op;
+    
+    printf("Enter a valid expression (e.g., 5+3): ");
+    scanf("%f %c %f", &a, &op, &b);
+
+    switch (op) {
+        case '+': 
+            res = a + b;
+            printf("\\nThe Result of %.2f %c %.2f = %.2f\\n", a, op, b, res);
+            break;
+        case '-': 
+            res = a - b;
+            printf("\\nThe Result of %.2f %c %.2f = %.2f\\n", a, op, b, res);
+            break;
+        case '*': 
+            res = a * b;
+            printf("\\nThe Result of %.2f %c %.2f = %.2f\\n", a, op, b, res);
+            break;
+        case '/': 
+            if (b == 0) {
+                printf("Divide by Zero Error\\n");
+                exit(0);
+            } else {
+                res = a / b;
+                printf("\\nThe Result of %.2f %c %.2f = %.2f\\n", a, op, b, res);
+            }
+            break;
+        default:
+            printf("Invalid Expression\\n");
+            break;
+    }
+}`,
+      output: "7+8 = 15"
+    },

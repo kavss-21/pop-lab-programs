@@ -1,0 +1,44 @@
+ 5: {
+            code: `#include <stdio.h>
+        
+    int main() 
+    { 
+        int a[100], n, i, low, high, mid, key, flag = 0; 
+    
+        printf("Enter the size of the array\\n"); 
+        scanf("%d", &n); 
+    
+        printf("Enter %d elements in ascending order\\n", n); 
+        for(i = 0; i < n; i++) 
+        { 
+            scanf("%d", &a[i]); 
+        } 
+    
+        printf("Enter the element to be searched\\n"); 
+        scanf("%d", &key); 
+    
+        low = 0; 
+        high = n - 1; 
+    
+        while(low <= high) 
+        { 
+            mid = (low + high) / 2; 
+            if(key == a[mid]) 
+            { 
+                flag = 1; 
+                break; 
+            } 
+            else if(key > a[mid]) 
+                low = mid + 1; 
+            else 
+                high = mid - 1; 
+        } 
+    
+        if(flag == 1) 
+            printf("Element found at position %d\\n", mid + 1); 
+        else 
+            printf("Element not found\\n"); 
+    
+        return 0; 
+    }`,
+        },

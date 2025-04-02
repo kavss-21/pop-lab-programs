@@ -1,0 +1,37 @@
+3: {
+        code: `#include <stdio.h>
+
+void main() {
+    char name[20]; 
+    int units, mtc = 100; 
+    float charge, ta; 
+
+    // Prompt user for input
+    printf("Enter the consumer name: ");
+    scanf("%s", name); 
+
+    printf("Enter the units consumed: ");
+    scanf("%d", &units); 
+
+    // Calculate charge based on unit consumption
+    if (units <= 200) { 
+        charge = units * 0.80; 
+    } 
+    else if (units > 200 && units <= 300) { 
+        charge = 200 * 0.80 + (units - 200) * 0.90; 
+    } 
+    else { 
+        charge = 200 * 0.80 + 100 * 0.90 + (units - 300) * 1.00; 
+    }
+
+    ta = charge + mtc; 
+
+    // Apply 15% surcharge if total amount exceeds 400
+    if (ta > 400) {
+        ta = ta + (ta * 0.15); 
+    }
+
+    // Display output
+    printf("\\n%s has consumed %d units.\\nHence, the total amount to be paid is %.2f Rupees only.\\n", name, units, ta); 
+}`,
+    },

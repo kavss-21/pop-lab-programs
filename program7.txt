@@ -1,0 +1,38 @@
+ 7: {
+        code: `#include <stdio.h>
+#include <math.h>
+
+#define PI 3.141592653589793  // More accurate value of π
+
+int main() 
+{ 
+    int degree, i; 
+    float x, num, den, term, sum = 0; 
+
+    // Input angle in degrees
+    printf("Enter the value of degrees: "); 
+    scanf("%d", &degree); 
+
+    // Convert degrees to radians
+    x = (degree * PI) / 180; 
+    num = x; 
+    den = 1; 
+    i = 2; 
+
+    // Calculate sin(x) using Taylor series expansion
+    do 
+    { 
+        term = num / den; 
+        sum += term; 
+        num = -num * x * x; 
+        den = den * i * (i + 1); 
+        i += 2; 
+    } while (fabs(term) > 0.000001); 
+
+    // Display results
+    printf("sin(%d) = %f (without using library function)\\n", degree, sum); 
+    printf("sin(%d) = %f (using library function)\\n", degree, sin(x)); 
+
+    return 0; 
+}`,
+    },

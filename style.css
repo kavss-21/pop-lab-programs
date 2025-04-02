@@ -1,0 +1,134 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Logo Styling */
+.logo img, .branch-logo img {
+    height: 50px;  /* Small size */
+    width: auto;
+}
+
+/* Title Styling */
+.title {
+    text-align: center;
+    color: white;
+    flex: 1;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    position: relative;
+    display: inline-block;
+}
+
+/* Navbar Links */
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Dropdown Items */
+.dropdown-content li {
+    list-style: none;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* About Us Section */
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+}
+
+.about-card img {
+    width: 100px;  /* Set image size */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.about-card p {
+    font-size: 14px;
+    color: gray;
+}

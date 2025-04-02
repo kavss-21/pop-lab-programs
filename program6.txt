@@ -1,0 +1,94 @@
+ 6: {
+            code: `#include <stdio.h>
+            
+    int main() 
+    { 
+        int a[50][50], b[50][50], c[50][50]; 
+        int m, n, p, q, i, j, k; 
+            
+        // Taking order of Matrix A
+        printf("Enter the order of Matrix A (rows and columns): "); 
+        scanf("%d%d", &m, &n); 
+            
+        // Taking order of Matrix B
+        printf("Enter the order of Matrix B (rows and columns): "); 
+        scanf("%d%d", &p, &q); 
+            
+        // Check if multiplication is possible
+        if(n != p) 
+        { 
+            printf("Matrix Multiplication Not Possible\\n"); 
+            return 0; 
+        } 
+            
+        // Input for Matrix A
+        printf("Enter the elements of Matrix A:\\n"); 
+        for(i = 0; i < m; i++) 
+        { 
+            for(j = 0; j < n; j++) 
+            { 
+                scanf("%d", &a[i][j]); 
+            } 
+        } 
+            
+        // Display Matrix A
+        printf("Matrix A is:\\n"); 
+        for(i = 0; i < m; i++) 
+        { 
+            for(j = 0; j < n; j++) 
+            { 
+                printf("%d\\t", a[i][j]); 
+            } 
+            printf("\\n"); 
+        } 
+            
+        // Input for Matrix B
+        printf("Enter the elements of Matrix B:\\n"); 
+        for(i = 0; i < p; i++) 
+        { 
+            for(j = 0; j < q; j++) 
+            { 
+                scanf("%d", &b[i][j]); 
+            } 
+        } 
+            
+        // Display Matrix B
+        printf("Matrix B is:\\n"); 
+        for(i = 0; i < p; i++) 
+        { 
+            for(j = 0; j < q; j++) 
+            { 
+                printf("%d\\t", b[i][j]); 
+            } 
+            printf("\\n"); 
+        } 
+            
+        // Perform Matrix Multiplication
+        printf("\\n***** MATRIX MULTIPLICATION *****\\n"); 
+        for(i = 0; i < m; i++) 
+        { 
+            for(j = 0; j < q; j++) 
+            { 
+                c[i][j] = 0; 
+                for(k = 0; k < n; k++) 
+                { 
+                    c[i][j] += a[i][k] * b[k][j]; 
+                } 
+            } 
+        } 
+            
+        // Display Resultant Matrix
+        printf("The resultant Matrix is:\\n"); 
+        for(i = 0; i < m; i++) 
+        { 
+            for(j = 0; j < q; j++) 
+            { 
+                printf("%d\\t", c[i][j]); 
+            } 
+            printf("\\n"); 
+        } 
+            
+        return 0; 
+    }`,
+        },
+    
